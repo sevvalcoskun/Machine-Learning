@@ -5,3 +5,5 @@ regression problem:trying to guess that continuous values
 classification problem: trying to guess that 0 or 1 or 2 or ect. (discrete value)
 Unsupervised Learning
 clustering algorithm
+Cost Function: hipotez fonksiyonunun doğruluğunu ölçmek için kullanılır.
+

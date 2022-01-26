@@ -6,4 +6,8 @@ classification problem: trying to guess that 0 or 1 or 2 or ect. (discrete value
 Unsupervised Learning
 clustering algorithm
 Cost Function: hipotez fonksiyonunun doğruluğunu ölçmek için kullanılır.
-
+Gradient Descent:
+(Assignment) a:=b b'nin değerini a'nın üzerine yaz yani a^nın değerini b^ninkine eşit yap. (bu bir atama)
+θ_j:=θ_j-α ∂/(∂θ_j ) J(θ_0 θ_1) (Gradient Descent Algorithm) (Bu bir güncelleme aslında) simultaneously update θ_0 and θ_1
+alfa is learning rate. alfa çok büyükse iniş o kadar keskin. (positive number)
+Bu denklemi θ_0 and θ_1 için aynı anda hesaplamalısın. birini önce birini sonra hesaplarsan o zaman ikinci hesapladığına birincinin güncel sonucunu yazman gerekir ve bu ikincinin sonucunu bozar.

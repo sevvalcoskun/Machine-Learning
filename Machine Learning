@@ -13,3 +13,4 @@ alfa is learning rate. alfa çok büyükse iniş o kadar keskin. (positive numbe
 Bu denklemi θ_0 and θ_1 için aynı anda hesaplamalısın. birini önce birini sonra hesaplarsan o zaman ikinci hesapladığına birincinin güncel sonucunu yazman gerekir ve bu ikincinin sonucunu bozar.
 teta değeri zaten yerel minimumdaysa o zaman denklemde türev terimi sıfır olur çünkü eğim sıfır. Dolayısıyla teta değeri değişmez.
 Batch gradient descent: her seferinde gradient descentin tüm eğitim kümesine bakmak 
+prediction=data matrix + parameters

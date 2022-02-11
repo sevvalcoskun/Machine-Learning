@@ -17,6 +17,7 @@ prediction=data matrix + parameters
 
 Octave alıştırma:
 
+octave:1>
 octave:1> 5+6
 ans = 11
 octave:2> 5*8
@@ -59,3 +60,1632 @@ c = 1
 >> a=pi;
 >> a
 a = 3.1416
+>>
+>> disp(a)
+3.1416
+>> format long
+>> a=pi
+a = 3.141592653589793
+>> format short
+>> a=pi
+a = 3.1416
+>> A=[12;13;15]
+A =
+
+   12
+   13
+   15
+
+>> A=[1 2; 1 3; 1 5]
+A =
+
+   1   2
+   1   3
+   1   5
+
+>> X=[1 2 3]
+X =
+
+   1   2   3
+
+>> V=[1;2;3]
+V =
+
+   1
+   2
+   3
+
+>> V=1:0,1:2
+V = [](1x0)
+ans =
+
+   1   2
+
+>> V=1:0.1:2
+V =
+
+    1.0000    1.1000    1.2000    1.3000    1.4000    1.5000    1.6000    1.7000    1.8000    1.9000    2.0000
+
+>> V=1:6
+V =
+
+   1   2   3   4   5   6
+
+>> ONES(2,3)
+error: 'ONES' undefined near line 1, column 1
+>> ones(2,3)
+ans =
+
+   1   1   1
+   1   1   1
+
+>> 4(2,3)
+error: index (2,_): out of bound 1 (dimensions are 1x1)
+>> four(2,3)
+error: 'four' undefined near line 1, column 1
+>> 2*ones(2,3)
+ans =
+
+   2   2   2
+   2   2   2
+
+>> W=ones(2,3)
+W =
+
+   1   1   1
+   1   1   1
+
+>> W=zeros(2,3)
+W =
+
+   0   0   0
+   0   0   0
+
+>> w=rand(2,3)
+w =
+
+   0.071325   0.306748   0.017460
+   0.995891   0.171302   0.740229
+
+>> %rand random say atamak iin
+>> #iin
+>> %icin
+>> randn(2,3)
+ans =
+
+  -0.2069   1.5670   1.8061
+  -0.8625  -0.8862  -0.5084
+
+>> W= -6 +sqrt(2)*(randn(1,2))
+W =
+
+  -6.4866  -6.8297
+
+>> hist(w)
+>> w= -6 +sqrt(10)*(randn(1,10000))
+w =
+
+
+
+Column 10000:
+
+  -1.0525e+01
+
+>> hist(w)
+>> hist(w,10)
+>> hist(w)
+>> hist(w,50)
+>> hist(w)
+>> %hist histogram w,50 yazdgnda sanrm histogram 5o parcaya boluyor
+>> eye(4)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0
+   0   1   0   0
+   0   0   1   0
+   0   0   0   1
+
+>> eye(6)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0   0
+   0   1   0   0   0   0
+   0   0   1   0   0   0
+   0   0   0   1   0   0
+   0   0   0   0   1   0
+   0   0   0   0   0   1
+
+>> help eye
+'eye' is a built-in function from the file libinterp/corefcn/data.cc
+
+ -- eye (N)
+ -- eye (M, N)
+ -- eye ([M N])
+ -- eye (..., CLASS)
+     Return an identity matrix.
+
+     If invoked with a single scalar argument N, return a square NxN
+     identity matrix.
+
+     If supplied two scalar arguments (M, N), 'eye' takes them to be the
+     number of rows and columns.  If given a vector with two elements,
+     'eye' uses the values of the elements as the number of rows and
+     columns, respectively.  For example:
+
+          eye (3)
+           =>  1  0  0
+               0  1  0
+               0  0  1
+
+     The following expressions all produce the same result:
+
+          eye (2)
+          ==
+          eye (2, 2)
+          ==
+          eye (size ([1, 2; 3, 4]))
+
+     The optional argument CLASS, allows 'eye' to return an array of the
+     specified type, like
+
+          val = zeros (n,m, "uint8")
+
+     Calling 'eye' with no arguments is equivalent to calling it with an
+     argument of 1.  Any negative dimensions are treated as zero.  These
+     odd definitions are for compatibility with MATLAB.
+
+     See also: speye, ones, zeros.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> A=[1 2;3 4;5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> size(A)
+ans =
+
+   3   2
+
+>> sz=size(A)
+sz =
+
+   3   2
+
+>> size(sz)
+ans =
+
+   1   2
+
+>> size(A,1)
+ans = 3
+>> size(A,2)
+ans = 2
+>> size(A,3)
+ans = 1
+>> v=[1 2 3 4]
+v =
+
+   1   2   3   4
+
+>> size(v)
+ans =
+
+   1   4
+
+>> lenght(v)
+error: 'lenght' undefined near line 1, column 1
+>> leng(v)
+error: 'leng' undefined near line 1, column 1
+>> length(v)
+ans = 4
+>> length(A)
+ans = 3
+>> pwd
+ans = C:\Users\sevva
+>> cd 'C:\Users\sevva\Desktop
+error: parse error:
+
+  syntax error
+
+>>> cd 'C:\Users\sevva\Desktop
+                             ^
+>> cd 'C:\Users\sevva\Desktop'
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> %dosyam masastu olark degstrdm.
+>> Directory of  C:\Users\sevva\Desktop
+error: 'Directory' undefined near line 1, column 1
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> Directoryof C:\Users\sevva\Desktop
+error: 'Directoryof' undefined near line 1, column 1
+>> load size
+error: load: unable to find file size
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> ls
+ Volume in drive C is WINDOWS
+ Volume Serial Number is 248F-C069
+
+ Directory of C:\Users\sevva\Desktop
+
+[.]  [..]
+               0 File(s)              0 bytes
+               2 Dir(s)  138.793.504.768 bytes free
+>> load size
+error: load: unable to find file size
+>> load size
+error: load: unable to find file size
+>> load Ayna Cila
+error: load: unable to find file Ayna
+>> load('size')
+error: load: unable to find file size
+>> who
+Variables visible from the current scope:
+
+A    V    W    X    a    ans  b    c    sz   v    w
+
+>> size
+error: Invalid call to size.  Correct usage is:
+
+ -- SZ = size (A)
+ -- DIM_SZ = size (A, DIM)
+ -- [ROWS, COLS, ..., DIM_N_SZ] = size (...)
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> load('meraba')
+error: load: unable to find file meraba
+>> who
+Variables visible from the current scope:
+
+A    V    W    X    a    ans  b    c    sz   v    w
+
+>> meraba
+error: 'meraba' undefined near line 1, column 1
+>> load('meraba.dot')
+error: load: unable to find file meraba.dot
+>>
+>>
+>>
+>> who
+Variables visible from the current scope:
+
+A    V    W    X    a    ans  b    c    sz   v    w
+
+>> meraba
+error: 'meraba' undefined near line 1, column 1
+>> load('meraba.dat')
+error: load: unable to find file meraba.dat
+>> who
+Variables visible from the current scope:
+
+A    V    W    X    a    ans  b    c    sz   v    w
+
+>> meraba
+error: 'meraba' undefined near line 1, column 1
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> load deneme
+error: load: unable to find file deneme
+>> load('deneme')
+error: load: unable to find file deneme
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> load Horizon Soru
+error: load: unable to find file Horizon
+>> load meraba.dat
+error: load: unable to find file meraba.dat
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> ls
+ Volume in drive C is WINDOWS
+ Volume Serial Number is 248F-C069
+
+ Directory of C:\Users\sevva\Desktop
+
+[.]  [..]
+               0 File(s)              0 bytes
+               2 Dir(s)  138.787.246.080 bytes free
+>> load meraba.dat
+error: load: unable to find file meraba.dat
+>> ls
+ Volume in drive C is WINDOWS
+ Volume Serial Number is 248F-C069
+
+ Directory of C:\Users\sevva\Desktop
+
+[.]  [..]
+               0 File(s)              0 bytes
+               2 Dir(s)  138.787.549.184 bytes free
+>> ls
+ Volume in drive C is WINDOWS
+ Volume Serial Number is 248F-C069
+
+ Directory of C:\Users\sevva\Desktop
+
+[.]  [..]
+               0 File(s)              0 bytes
+               2 Dir(s)  138.751.561.728 bytes free
+>> ls
+ Volume in drive C is WINDOWS
+ Volume Serial Number is 248F-C069
+
+ Directory of C:\Users\sevva\Desktop
+
+[.]         [..]        denem.txt
+               1 File(s)             61 bytes
+               2 Dir(s)  138.748.784.640 bytes free
+>> load denem
+error: load: unable to find file denem
+>> ls
+ Volume in drive C is WINDOWS
+ Volume Serial Number is 248F-C069
+
+ Directory of C:\Users\sevva\Desktop
+
+[.]         [..]        denem.txt
+               1 File(s)             61 bytes
+               2 Dir(s)  138.749.333.504 bytes free
+>> load denem
+error: load: unable to find file denem
+>> load ('denem')
+error: load: unable to find file denem
+>> ls
+ Volume in drive C is WINDOWS
+ Volume Serial Number is 248F-C069
+
+ Directory of C:\Users\sevva\Desktop
+
+[.]         [..]        denem.txt
+               1 File(s)             61 bytes
+               2 Dir(s)  138.748.760.064 bytes free
+>> load denem
+error: load: unable to find file denem
+>> load denem.txt
+>> load('denem')
+error: load: unable to find file denem
+>> load('denem.txt')
+>> who
+Variables visible from the current scope:
+
+A      V      W      X      a      ans    b      c      denem  sz     v      w
+
+>> denem
+denem =
+
+    1   65
+    2   75
+    3   91
+    4   23
+    5   12
+    6   98
+    7   23
+    8   78
+    9   65
+   10   45
+
+>> size(denem)
+ans =
+
+   10    2
+
+>> whos
+Variables visible from the current scope:
+
+variables in scope: top scope
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  =====
+        A           3x2                         48  double
+        V           1x6                         24  double
+        W           1x2                         16  double
+        X           1x3                         24  double
+        a           1x1                          8  double
+        ans         1x2                         16  double
+        b           1x2                          2  char
+        c           1x1                          1  logical
+        denem      10x2                        160  double
+        sz          1x2                         16  double
+        v           1x4                         32  double
+        w           1x10000                  80000  double
+
+Total is 10049 elements using 80347 bytes
+
+>> clear denem
+>> whos
+Variables visible from the current scope:
+
+variables in scope: top scope
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  =====
+        A           3x2                         48  double
+        V           1x6                         24  double
+        W           1x2                         16  double
+        X           1x3                         24  double
+        a           1x1                          8  double
+        ans         1x2                         16  double
+        b           1x2                          2  char
+        c           1x1                          1  logical
+        sz          1x2                         16  double
+        v           1x4                         32  double
+        w           1x10000                  80000  double
+
+Total is 10029 elements using 80187 bytes
+
+>> load denem
+error: load: unable to find file denem
+>> load denem.txt
+>> who
+Variables visible from the current scope:
+
+A      V      W      X      a      ans    b      c      denem  sz     v      w
+
+>> denem
+denem =
+
+    1   65
+    2   75
+    3   91
+    4   23
+    5   12
+    6   98
+    7   23
+    8   78
+    9   65
+   10   45
+
+>> v=denem(1:5)
+v =
+
+   1   2   3   4   5
+
+>> v=denem(2:5)
+v =
+
+   2   3   4   5
+
+>> v=denem(65:78)
+error: denem(78): out of bound 20 (dimensions are 10x2)
+>> v=denem(65:5)
+v = [](1x0)
+>> v=denem(1:5)
+v =
+
+   1   2   3   4   5
+
+>> whos
+Variables visible from the current scope:
+
+variables in scope: top scope
+
+   Attr Name        Size                     Bytes  Class
+   ==== ====        ====                     =====  =====
+        A           3x2                         48  double
+        V           1x6                         24  double
+        W           1x2                         16  double
+        X           1x3                         24  double
+        a           1x1                          8  double
+        ans         1x2                         16  double
+        b           1x2                          2  char
+        c           1x1                          1  logical
+        denem      10x2                        160  double
+        sz          1x2                         16  double
+        v           1x5                         40  double
+        w           1x10000                  80000  double
+
+Total is 10050 elements using 80355 bytes
+
+>> %v nin size  degst yukardakna gore cunku v y yenden tanmladk
+>> save hello v;
+>> clear
+>> save hello.txt v
+warning: save: no such variable 'v'
+>> save hello.txt v;
+warning: save: no such variable 'v'
+>> load hello
+>> save hello.txt v;
+
+
+
+
+ A=[1 2; 3 4; 5 6]
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:2> A(2,3)
+error: A(_,3): out of bound 2 (dimensions are 3x2)
+octave:3> A(3,2)
+ans = 6
+octave:4> A(2,:)
+ans =
+
+   3   4
+
+octave:5> A(:,2)
+ans =
+
+   2
+   4
+   6
+
+octave:6> A({[1 3],:)
+error: parse error:
+
+  syntax error
+
+>>> A({[1 3],:)
+               ^
+octave:6> A([1 3],:)
+ans =
+
+   1   2
+   5   6
+
+octave:7> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+octave:8> PS1(2>> ');
+error: parse error:
+
+  syntax error
+
+>>> PS1(2>> ');
+          ^
+octave:8> PS1('>> ');
+>> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> A(:,2)
+ans =
+
+   2
+   4
+   6
+
+>> A(:,2)=[10; 11; 12]
+A =
+
+    1   10
+    3   11
+    5   12
+
+>> A=[A,[100,101,102]];
+error: horizontal dimensions mismatch (3x2 vs 1x3)
+>> A = [A, [100, 101, 102]];
+error: horizontal dimensions mismatch (3x2 vs 1x3)
+>> A=[A,[100; 101; 102]];
+>> A
+A =
+
+     1    10   100
+     3    11   101
+     5    12   102
+
+>> size(A)
+ans =
+
+   3   3
+
+>> A(:)
+ans =
+
+     1
+     3
+     5
+    10
+    11
+    12
+   100
+   101
+   102
+
+>> A[1 2; 3 4; 5 6];
+error: parse error:
+
+  syntax error
+
+>>> A[1 2; 3 4; 5 6];
+     ^
+>> B=[11 12; 13 14; 15 16];
+>> B
+B =
+
+   11   12
+   13   14
+   15   16
+
+>> A
+A =
+
+     1    10   100
+     3    11   101
+     5    12   102
+
+>> A=[1 2; 3 4; 5 6];
+>> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> B
+B =
+
+   11   12
+   13   14
+   15   16
+
+>> C=[A,B]
+C =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+>> C=[A;B]
+C =
+
+    1    2
+    3    4
+    5    6
+   11   12
+   13   14
+   15   16
+
+>> size(C)
+ans =
+
+   6   2
+
+>> [A B]
+ans =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+>> [A,B]
+ans =
+
+    1    2   11   12
+    3    4   13   14
+    5    6   15   16
+
+>> A=[1 2; 3 4; 5 6];
+>> B=[11 12; 13 14; 15 16];
+>> C=[1 1; 2 2]
+C =
+
+   1   1
+   2   2
+
+>> A*C
+ans =
+
+    5    5
+   11   11
+   17   17
+
+>> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> B
+B =
+
+   11   12
+   13   14
+   15   16
+
+>> A.*B
+ans =
+
+   11   24
+   39   56
+   75   96
+
+>> A.^2
+ans =
+
+    1    4
+    9   16
+   25   36
+
+>> v=[1; 2; 3]
+v =
+
+   1
+   2
+   3
+
+>> 1./v
+ans =
+
+   1.0000
+   0.5000
+   0.3333
+
+>> 1./A
+ans =
+
+   1.0000   0.5000
+   0.3333   0.2500
+   0.2000   0.1667
+
+>> log(v)
+ans =
+
+        0
+   0.6931
+   1.0986
+
+>> exp(v)
+ans =
+
+    2.7183
+    7.3891
+   20.0855
+
+>> v
+v =
+
+   1
+   2
+   3
+
+>> abs(v)
+ans =
+
+   1
+   2
+   3
+
+>> abs([-1; -2; -3])
+ans =
+
+   1
+   2
+   3
+
+>> -v
+ans =
+
+  -1
+  -2
+  -3
+
+>> v + ones(length(v),1)
+ans =
+
+   2
+   3
+   4
+
+>> ones(3,1)
+ans =
+
+   1
+   1
+   1
+
+>> v+ones(3,1)
+ans =
+
+   2
+   3
+   4
+
+>> v+1
+ans =
+
+   2
+   3
+   4
+
+>> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> A'
+ans =
+
+   1   3   5
+   2   4   6
+
+>> (A')'
+ans =
+
+   1   2
+   3   4
+   5   6
+
+>> a=[1 15 2 0.5]
+a =
+
+    1.0000   15.0000    2.0000    0.5000
+
+>> val=max(a)
+val = 15
+>> [val,ind]=max(a)
+val = 15
+ind = 2
+>> max(A)
+ans =
+
+   5   6
+
+>> A
+A =
+
+   1   2
+   3   4
+   5   6
+
+>> max(A,:)
+error: invalid use of colon in function argument list
+>> a
+a =
+
+    1.0000   15.0000    2.0000    0.5000
+
+>> a<3
+ans =
+
+  1  0  1  1
+
+>> find(a<3)
+ans =
+
+   1   3   4
+
+>> A=magic(3)
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> a
+a =
+
+    1.0000   15.0000    2.0000    0.5000
+
+>> A
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> [r,c]=
+error: parse error:
+
+  syntax error
+
+>>> [r,c]=
+         ^
+>> [r,c]=find(A>=7)
+r =
+
+   1
+   3
+   2
+
+c =
+
+   1
+   2
+   3
+
+>> A(2,3)
+ans = 7
+>> help find
+'find' is a built-in function from the file libinterp/corefcn/find.cc
+
+ -- IDX = find (X)
+ -- IDX = find (X, N)
+ -- IDX = find (X, N, DIRECTION)
+ -- [i, j] = find (...)
+ -- [i, j, v] = find (...)
+     Return a vector of indices of nonzero elements of a matrix, as a
+     row if X is a row vector or as a column otherwise.
+
+     To obtain a single index for each matrix element, Octave pretends
+     that the columns of a matrix form one long vector (like Fortran
+     arrays are stored).  For example:
+
+          find (eye (2))
+            => [ 1; 4 ]
+
+     If two inputs are given, N indicates the maximum number of elements
+     to find from the beginning of the matrix or vector.
+
+     If three inputs are given, DIRECTION should be one of "first" or
+     "last", requesting only the first or last N indices, respectively.
+     However, the indices are always returned in ascending order.
+
+     If two outputs are requested, 'find' returns the row and column
+     indices of nonzero elements of a matrix.  For example:
+
+          [i, j] = find (2 * eye (2))
+              => i = [ 1; 2 ]
+              => j = [ 1; 2 ]
+
+     If three outputs are requested, 'find' also returns a vector
+     containing the nonzero values.  For example:
+
+          [i, j, v] = find (3 * eye (2))
+                 => i = [ 1; 2 ]
+                 => j = [ 1; 2 ]
+                 => v = [ 3; 3 ]
+
+     Note that this function is particularly useful for sparse matrices,
+     as it extracts the nonzero elements as vectors, which can then be
+     used to create the original matrix.  For example:
+
+          sz = size (a);
+          [i, j, v] = find (a);
+          b = sparse (i, j, v, sz(1), sz(2));
+
+     See also: nonzeros.
+
+Additional help for built-in functions and operators is
+available in the online version of the manual.  Use the command
+'doc <topic>' to search the manual index.
+
+Help and information about Octave is also available on the WWW
+at https://www.octave.org and via the help@octave.org
+mailing list.
+>> a
+a =
+
+    1.0000   15.0000    2.0000    0.5000
+
+>> sum(a)
+ans = 18.500
+>> prod(a)
+ans = 15
+>> floor(a)
+ans =
+
+    1   15    2    0
+
+>> ceil(a)
+ans =
+
+    1   15    2    1
+
+>> rand(3)
+ans =
+
+   0.081943   0.250609   0.063408
+   0.744692   0.605591   0.397336
+   0.483013   0.914557   0.807978
+
+>> max(rand(3),rand(3))
+ans =
+
+   0.8131   0.8012   0.4772
+   0.8601   0.9493   0.7249
+   0.8960   0.7401   0.7983
+
+>>
+>>
+>> A
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> max(A,[],1)
+ans =
+
+   8   9   7
+
+>> %sutun basna max
+>> max(A,[],2)
+ans =
+
+   8
+   7
+   9
+
+>> %satr basna max
+>> max(A)
+ans =
+
+   8   9   7
+
+>> max(max(A))
+ans = 9
+>> A(:)
+ans =
+
+   8
+   3
+   4
+   1
+   5
+   9
+   6
+   7
+   2
+
+>> max(A(:))
+ans = 9
+>> A=magic(9)
+A =
+
+   47   58   69   80    1   12   23   34   45
+   57   68   79    9   11   22   33   44   46
+   67   78    8   10   21   32   43   54   56
+   77    7   18   20   31   42   53   55   66
+    6   17   19   30   41   52   63   65   76
+   16   27   29   40   51   62   64   75    5
+   26   28   39   50   61   72   74    4   15
+   36   38   49   60   71   73    3   14   25
+   37   48   59   70   81    2   13   24   35
+
+>> sum(9,1)
+ans = 9
+>> %yanls yazdm yukary
+>> sum(A,1)
+ans =
+
+   369   369   369   369   369   369   369   369   369
+
+>> % SUM(A,1) sanirim sutun basina toplam sum(A,2) de satir basina toplam galiba o zaman
+>>
+>>
+>> sum(A,2)
+ans =
+
+   369
+   369
+   369
+   369
+   369
+   369
+   369
+   369
+   369
+
+>> eye(9)
+ans =
+
+Diagonal Matrix
+
+   1   0   0   0   0   0   0   0   0
+   0   1   0   0   0   0   0   0   0
+   0   0   1   0   0   0   0   0   0
+   0   0   0   1   0   0   0   0   0
+   0   0   0   0   1   0   0   0   0
+   0   0   0   0   0   1   0   0   0
+   0   0   0   0   0   0   1   0   0
+   0   0   0   0   0   0   0   1   0
+   0   0   0   0   0   0   0   0   1
+
+>> A
+A =
+
+   47   58   69   80    1   12   23   34   45
+   57   68   79    9   11   22   33   44   46
+   67   78    8   10   21   32   43   54   56
+   77    7   18   20   31   42   53   55   66
+    6   17   19   30   41   52   63   65   76
+   16   27   29   40   51   62   64   75    5
+   26   28   39   50   61   72   74    4   15
+   36   38   49   60   71   73    3   14   25
+   37   48   59   70   81    2   13   24   35
+
+>> A.*eye(9)
+ans =
+
+   47    0    0    0    0    0    0    0    0
+    0   68    0    0    0    0    0    0    0
+    0    0    8    0    0    0    0    0    0
+    0    0    0   20    0    0    0    0    0
+    0    0    0    0   41    0    0    0    0
+    0    0    0    0    0   62    0    0    0
+    0    0    0    0    0    0   74    0    0
+    0    0    0    0    0    0    0   14    0
+    0    0    0    0    0    0    0    0   35
+
+>> sum(sum(A.*eye(9)))
+ans = 369
+>> flipud(eye(9))
+ans =
+
+Permutation Matrix
+
+   0   0   0   0   0   0   0   0   1
+   0   0   0   0   0   0   0   1   0
+   0   0   0   0   0   0   1   0   0
+   0   0   0   0   0   1   0   0   0
+   0   0   0   0   1   0   0   0   0
+   0   0   0   1   0   0   0   0   0
+   0   0   1   0   0   0   0   0   0
+   0   1   0   0   0   0   0   0   0
+   1   0   0   0   0   0   0   0   0
+
+>> sum(sum(A.*flipud(eye(9))))
+ans = 369
+>> flipdown(eye(9))
+error: 'flipdown' undefined near line 1, column 1
+>> A=magic(3)
+A =
+
+   8   1   6
+   3   5   7
+   4   9   2
+
+>> pinv(A)
+ans =
+
+   0.147222  -0.144444   0.063889
+  -0.061111   0.022222   0.105556
+  -0.019444   0.188889  -0.102778
+
+>> %PSEUDO inverse of A
+>> temp=pinv(A)
+temp =
+
+   0.147222  -0.144444   0.063889
+  -0.061111   0.022222   0.105556
+  -0.019444   0.188889  -0.102778
+
+>> temp*A
+ans =
+
+   1.0000e+00   8.3267e-17  -2.9698e-15
+  -6.0507e-15   1.0000e+00   6.3283e-15
+   2.9421e-15   4.4409e-16   1.0000e+00
+
+>>
+>>
+>>
+>> t=[0:0.01:0.98];
+>> t
+t =
+
+ Columns 1 through 18:
+
+        0   0.0100   0.0200   0.0300   0.0400   0.0500   0.0600   0.0700   0.0800   0.0900   0.1000   0.1100   0.1200   0.1300   0.1400   0.1500   0.1600   0.1700
+
+ Columns 19 through 36:
+
+   0.1800   0.1900   0.2000   0.2100   0.2200   0.2300   0.2400   0.2500   0.2600   0.2700   0.2800   0.2900   0.3000   0.3100   0.3200   0.3300   0.3400   0.3500
+
+ Columns 37 through 54:
+
+   0.3600   0.3700   0.3800   0.3900   0.4000   0.4100   0.4200   0.4300   0.4400   0.4500   0.4600   0.4700   0.4800   0.4900   0.5000   0.5100   0.5200   0.5300
+
+ Columns 55 through 72:
+
+   0.5400   0.5500   0.5600   0.5700   0.5800   0.5900   0.6000   0.6100   0.6200   0.6300   0.6400   0.6500   0.6600   0.6700   0.6800   0.6900   0.7000   0.7100
+
+ Columns 73 through 90:
+
+   0.7200   0.7300   0.7400   0.7500   0.7600   0.7700   0.7800   0.7900   0.8000   0.8100   0.8200   0.8300   0.8400   0.8500   0.8600   0.8700   0.8800   0.8900
+
+ Columns 91 through 99:
+
+   0.9000   0.9100   0.9200   0.9300   0.9400   0.9500   0.9600   0.9700   0.9800
+
+>> y1=sin(2*pi*4*t);
+>> plot(t,y1);
+>> y2=cos(2*pi*4*t);
+>> plot(t,y2);
+>> plot(t,y1);
+>> hold on;
+>> plot(t,y2,'r');
+>> % hold on sanrm birlstirme plot(t,y1) ile plot(t,y2)yi birlestir. 'r' sanrm (t,y2)yi farkli renk yap demek
+>> xlabel('time')
+>> ylabel('value')
+>> % bu x y eksenine isim vermeyi sagiyor
+>> legend('sin','cos')
+>> % sin cos izgilerinin hangisi oldugunu belirtiyor grafikte
+>> title('my plot')
+>> cd 'C:\Users\sevval\Desktop';print  -dpng 'myPlot.png'
+error: C:\Users\sevval\Desktop: No such file or directory
+>> cd 'C:\Users\sevva\Desktop';print  -dpng 'myPlot.png'
+>>% grafik kullanıcılar>sevva>masaüstü nde var 
+
+ figure(1); plot(t,y1);
+>> figure(2); plot(t,y2);
+>> subplot(1,2,1);
+>> plot(t,y1);
+>> subplot(1,2,2);
+>> plot(t,y2);
+>> plot(t,y2);
+>> % sayfay ikiye bol 1,2,1 sondaki bir ilk yarm sanrm oraya t,y1 i koy. 1,2,2 sondaki 2 de ikinci yarim (t,y2) yi koy saga da
+>> axis([0.5 1 -1 1])
+>> %bu grafikde x y ekseni baslangic noktas ve bitis noktasi ni belirliyor yani grafikteki degerler x ekseninde o.5 den 1 e y de -1 den 1 e. koordinat cizgisindeki sai
+larin skls yani
+>> clf;
+>> %grafi
+>> %grafik sayfasini temizler.
+>>
+>>
+>> A=magic(5)
+A =
+
+   17   24    1    8   15
+   23    5    7   14   16
+    4    6   13   20   22
+   10   12   19   21    3
+   11   18   25    2    9
+
+>> imagesc(A)
+>> % 5 by 5 lik matrisi grafikti gsteriyor 5 by 5 kutular seklinde imagesc deki c sanrm color cunku kutular renkli, kaytl color diye ayn yerde.
+>> print -dpng 'color.png'
+>> %her renk farkl bir sayi
+>> imagesc(A), colorbar, colarmap gray;
+error: 'colarmap' undefined near line 1, column 1
+>> imagesc(A)
+>> imagesc(A), colorbar
+>> %yana renk skalasn ekliyor.
+>> imagesc(A), colorbar, colormap gray;
+>> %renkleri gri tonlar yapyor
+>> images(A), colorbar, colormap yellow;
+error: 'images' undefined near line 1, column 1
+>> images(A)
+error: 'images' undefined near line 1, column 1
+>> imagesc(A), colorbar, colormap yellow;
+error: colormap: failed to set MAP <yellow>
+error: called from
+    colormap at line 113 column 11
+>> A(1,2)
+ans = 24
+>> A(4,5)
+ans = 3
+>> imagesc(magic(15)), colorbar, colormap gray;
+>> a=1, b=2, c=3
+a = 1
+b = 2
+c = 3
+>> a=1; b=2; c=3;
+>> B=[13 12; 14 15;16 17];
+>> B
+B =
+
+   13   12
+   14   15
+   16   17
+
+>> imagesc(B)
+>>
+>> imagesc(B), colorbar
+>>
+>>
+>>
+>>
+>> v=zeros(10,1)
+v =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> for i=1:10,
+> v(i)=2^i;
+> end;
+>> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+>> indices=1:10;
+>> indices=
+error: parse error:
+
+  syntax error
+
+>>> indices=
+           ^
+>> indices
+indices =
+
+    1    2    3    4    5    6    7    8    9   10
+
+>> for i=indices;
+> %yanl yazdm
+> for i=indices,
+> disp(i);
+> end;
+> i
+> end;
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+i = 10
+>> for i=indices,
+> disp(i);
+> end;
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+>> %imdi dogru oldu
+>> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+
+>> i=1;
+>> while i<=5,
+> v(i)=100;
+> i=i+1;
+> end;
+>> v
+v =
+
+    100
+    100
+    100
+    100
+    100
+     64
+    128
+    256
+    512
+   1024
+
+>> i=1;
+>> while true,
+> v(i)=999;
+> i=i+1;
+> if i==6,
+> break;
+> end;
+> end;
+>> v
+v =
+
+    999
+    999
+    999
+    999
+    999
+     64
+    128
+    256
+    512
+   1024
+
+>> v(1)
+ans = 999
+>> v(1)=2;
+>> if v(1)==1,
+> disp('The value is one');
+> elseif v(1)==2;
+> disp('The value is two');
+> else
+> disp('The value is not one or two.');
+> end;
+The value is two
+>> %if bir olasiligi veriyor eger v(1)==1 ise the value is one yaz, diger olaslg yazmak icin elseif kullanyoruz v(1)==2 ise ..... yaz ikisi de degilse sunu yaz demek i
+cin de else kullanlyor
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> %bu tanm octave da tanimli degil o yzdeneror verdi ama ben pc de kaytl bir dosyay buraya getirirsem ve o dosyann icinde bu fonk. tanmlanmssa burda da tanimlanir
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> %suan benim desktop m burda kaytl dosya da onun icinde zaten direkt getirebilirim
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> %olmadi :( sanrm dosya tipinden
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> squareTheNumber(5);
+error: 'squareTheNumber' undefined near line 1, column 1
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> cd 'C:\Users\sevva\Desktop'
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>>
+>>
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> addpath('C:\Users\sevva\Desktop')
+>> cd 'C:\
+error: parse error:
+
+  syntax error
+
+>>> cd 'C:\
+          ^
+>> cd 'C:\'
+>> pwd
+ans = C:\
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> cd 'C:\Users\sevva\Desktop'
+>> pwd
+ans = C:\Users\sevva\Desktop
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1, column 1
+>> %yapamadm anlamadm :(
+>>½bundan sonra iki örnek verdi onlar da dosya çağımalıydı yapamadım. week 2  octave tutorial da control statement videosunun sonlarında.
+

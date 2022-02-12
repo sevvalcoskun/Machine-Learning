@@ -1689,3 +1689,35 @@ error: 'squareThisNumber' undefined near line 1, column 1
 >> %yapamadm anlamadm :(
 >>½bundan sonra iki örnek verdi onlar da dosya çağımalıydı yapamadım. week 2  octave tutorial da control statement videosunun sonlarında.
 
+
+THETAYI OPTİMİZE ETMEK:
+  function [jVal,gradient]= costFunction(theta);
+> jVal=(theta(1)-5)^2 + (theta(2)-5)^2;
+> gradient=zeros(2,1);
+> gradient(1)=2*(theta(1)-5);
+> gradient(2)=2*(theta(2)-5);
+> end;
+% Burda J yi ve gradyanti tanımladık önce (gradyent dediğimiz şey j nin partial türevi)
+% Daha sonra J nin denklemini gradyenti gradyent j yi vs tanımladık.
+
+
+>> options=optimset('GradObj', 'on', 'MaxIter', '100');
+>> initialTheta=zeros(2,1)
+initialTheta =
+
+   0
+   0
+
+>> [optTheta, functionalVal, exitFlag]= fminunc(@costFunction, initialTheta, options)
+optTheta =
+
+   5.0000
+   5.0000
+
+functionalVal = 1.5777e-30
+exitFlag = 1
+>> % Burda ilk satırda gradObk on verilen thetayı kullan demek sanırım. maxınter thetayı max 100 e kadar al. initial theta değerini girdik burdan başlıycak almaya 
+%daha sonr istediğim çıktıları yazdım ve fminunc komutunu kullanarak parantezin içindekileri kullanarak aynı zamanda buluyorsun. @ alfayi otomatik olarak secmek sanirim.
+%fminunc ın çalılşabilmesi için theta nın 2 boyuttan büyük olmaması lazım. fminunc minimaze eden değeri bulmanı sağlıyor costfunctionı
+
+

@@ -1721,3 +1721,55 @@ exitFlag = 1
 %fminunc ın çalılşabilmesi için theta nın 2 boyuttan büyük olmaması lazım. fminunc minimaze eden değeri bulmanı sağlıyor costfunctionı
 
 
+
+
+>> thetaVec=[Theta1(:); Theta2(:); Theta3(:)];
+>> size(thetaVec)
+ans =
+
+   231     1
+
+>> reshape(thetaVec(1:110), 10, 11)
+ans =
+
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+   1   1   1   1   1   1   1   1   1   1   1
+
+>> %thetaVec(1:110) 1 den 110'a kadar cikar demek
+>> reshape(thetaVec(111:220), 10, 11)
+ans =
+
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+   2   2   2   2   2   2   2   2   2   2   2
+
+>> reshape(thetaVec(221:231), 10, 11);
+error: reshape: can't reshape 11x1 array to 10x11 array
+>> reshape(thetaVec(221:231), 1, 11))
+error: parse error:
+
+  syntax error
+
+>>> reshape(thetaVec(221:231), 1, 11))
+                                     ^
+>> reshape(thetaVec(221:231), 1, 11)
+ans =
+
+   3   3   3   3   3   3   3   3   3   3   3
+
+

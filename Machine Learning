@@ -1721,7 +1721,7 @@ exitFlag = 1
 %fminunc ın çalılşabilmesi için theta nın 2 boyuttan büyük olmaması lazım. fminunc minimaze eden değeri bulmanı sağlıyor costfunctionı
 
 
-
+Back Probagation practice:
 
 >> thetaVec=[Theta1(:); Theta2(:); Theta3(:)];
 >> size(thetaVec)
